@@ -1,0 +1,176 @@
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html {
+               overflow-y: auto;
+            }
+            body {
+                font-family: "Markazi text", serif;
+                padding: 0.2rem 5%;
+                background-color: #edefee;
+            }
+
+            /* logo & navigation */
+            .logo {
+                display: block;
+                width: 35%;
+                height: auto;
+                margin: 0.8rem auto;
+                margin-top: 0.4rem;
+                padding: 0.5rem;
+            }
+            nav {
+                background-color: #212729;
+                border-radius: 0.6rem;
+                margin-bottom: 1.2rem;
+            }
+            nav ul{
+                list-style: none;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+                font-size: 1.2rem;
+                padding: 0;
+                margin: 0;
+            }
+            nav li {
+                flex: 0 1 auto;
+            }
+            nav a {
+                display: inline-block;
+                text-decoration: none;
+                padding: 0.4rem 0.8rem;
+                color: white;
+                transition: background-color 1s ease;
+            }
+            nav a:hover {
+                background-color: rgb(7, 93, 163)
+            }
+
+            /* main */
+            main {
+                display: flex;
+                flex-flow: column wrap;
+                gap: 0.8rem;
+            }
+            .promotion{
+                background-image: url(images/Christmas-bg.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                position: relative;
+
+                border-radius: 0.5rem;
+                min-height: 105px;
+                color: white;
+                padding: 2rem;
+            }
+            .promotion:before {  
+                content: "";
+                position: absolute;
+            }
+            .promotion > * {
+                position: relative;
+            }
+            main > section:nth-of-type(2) {
+                flex: 1 1 250px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: stretch;
+                gap: 0.8rem;
+            }
+            .categories {
+                flex: 1 1 230px;         
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 450px;         
+
+                background-color: #f4e9dd;
+                border-radius: 0.8rem;
+                padding: 0.8rem 0.8rem 0.3rem;
+            }
+            .categories :not(a){
+                margin-bottom: 1.2rem;
+            }
+            .categories img {
+                width: 100%;
+                height: auto;
+            }
+            .categories > a {
+                text-decoration: none;
+                display: inline-block;
+                text-align: center;
+                padding: 0.2rem 0.8rem;
+                background-color: #212729;
+                color: #fff;
+                border-radius: 4px;
+                transition: background-color 1s ease;
+            }
+            .categories > a:hover {
+                background-color: rgb(7, 93, 163)
+            }
+
+            /* footer */
+            footer {
+                display: flex;
+                flex-flow: row wrap;
+                gap: 1rem;
+            }
+            footer div{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                padding: 0.6rem;
+            }
+            footer img{
+              max-width: 140px;
+              height: auto;
+            }
+            footer p{
+              margin-left: auto;
+            }
+
+            /* smaller media */
+            @media (max-width: 600px) {
+                .logo {
+                    width: 50%;
+                    height: auto;
+                }
+                nav ul{
+                    gap: 0.7rem;
+                    font-size: 1.1rem;
+                }
+                nav a {
+                    padding: 0.3rem 0.6rem;
+                }
+                .categories > a {
+                    padding: 0.1rem 0.4rem;
+                }
+            }
+            @media (max-width:400px) {
+                .logo {
+                    width: 90%;
+                    height: auto;
+                }
+                nav ul {
+                    flex-direction: column;
+                }
+                footer {
+                    flex-direction: column;
+                    gap: 0;
+                }
+                footer img{
+                    max-width: 110px;
+                    height: auto;
+               }
+               footer div {
+                   margin: 0 auto;
+                   padding: 0.2rem 0.4rem;
+               }
+            }
